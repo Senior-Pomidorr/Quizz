@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Дизайн без названия-3" translatesAutoresizingMaskIntoConstraints="NO" id="Lbv-Y1-0Ti">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="S4n-bu-QFJ">
                                 <rect key="frame" x="20" y="59" width="353" height="759"/>
                                 <subviews>
@@ -61,10 +64,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.0" green="0.511780649759904" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Lbv-Y1-0Ti" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6Q2-V5-RBX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S4n-bu-QFJ" secondAttribute="bottom" id="8Bv-28-0Bt"/>
+                            <constraint firstItem="Lbv-Y1-0Ti" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CZD-kH-adL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S4n-bu-QFJ" secondAttribute="trailing" constant="20" id="MBa-8J-Swg"/>
+                            <constraint firstAttribute="bottom" secondItem="Lbv-Y1-0Ti" secondAttribute="bottom" id="S0a-qb-tPE"/>
                             <constraint firstItem="S4n-bu-QFJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UIw-jh-c7b"/>
-                            <constraint firstItem="S4n-bu-QFJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lsi-Fb-Jig"/>
+                            <constraint firstItem="Lbv-Y1-0Ti" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="eKE-68-wc6"/>
+                            <constraint firstItem="S4n-bu-QFJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="59" id="lsi-Fb-Jig"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -75,5 +82,6 @@
     </scenes>
     <resources>
         <image name="Image" width="322" height="68"/>
+        <image name="Дизайн без названия-3" width="1080" height="1920"/>
     </resources>
 </document>
