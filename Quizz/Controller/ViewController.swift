@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionText.text = "Welcome to Quizz"
+        questionText.text = questionsBrain.questionTextGet()
     }
 
     @IBAction func answerButton(_ sender: UIButton) {
