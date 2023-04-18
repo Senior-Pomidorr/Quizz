@@ -1,21 +1,12 @@
 //
-//  ViewController.swift
+//  QuestionsBrain.swift
 //  Quizz
 //
-//  Created by Daniil Kulikovskiy on 16.04.2023.
+//  Created by Daniil Kulikovskiy on 18.04.2023.
 //
 
-import UIKit
-
-class ViewController: UIViewController {
-
-    @IBOutlet var questionText: UILabel!
-    @IBOutlet var progressBar: UIProgressView!
-    @IBOutlet var trueButton: UIButton!
-    @IBOutlet var falseButton: UIButton!
-    
-    var questionNumber = 0
-    
+import Foundation
+struct QuestionsBrain {
     let questions = [
         Questions(text: "Five + Six equal to Eleven", answer: "True"),
         Questions(text: "Four is greather than two", answer: "True"),
@@ -32,38 +23,39 @@ class ViewController: UIViewController {
         Questions(text: "The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.", answer: "False"),
         Questions(text: "No piece of square dry paper can be folded in half more than 7 times.", answer: "False"),
         Questions(text: "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.", answer: "True")
-
-        ]
+        
+    ]
+    var questionNumber = 0
+    var score = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
-    @IBAction func answerButton(_ sender: UIButton) {
-        
-        let userAnswer = sender.currentTitle
-        let actualAnswer = questions[questionNumber].answer
-        
-        if userAnswer == actualAnswer {
-            print("Right!")
+    mutating func checkAnswer(_ answer: String) -> Bool {
+        if answer == questions[questionNumber].answer {
+            score += 1
+            return true
         } else {
-            print("Wrong!")
+            return false
         }
-        
+    }
+    
+    func questionTextGet()-> String {
+        return questions[questionNumber].text
+    }
+    
+    func progress() -> Float {
+        let progress = Float(questionNumber) / Float(questions.count)
+        return progress
+    }
+    
+    mutating func nextQuestion() {
         if questionNumber + 1 < questions.count {
             questionNumber += 1
         } else {
             questionNumber = 0
+            score = 0
         }
-        
-      
-        update()
     }
     
-    func update() {
-        questionText.text = questions[questionNumber].text
+    func getScore() -> Int {
+        return score
     }
-    
 }
-

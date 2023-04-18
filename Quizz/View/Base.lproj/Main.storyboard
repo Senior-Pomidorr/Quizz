@@ -21,8 +21,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="S4n-bu-QFJ">
                                 <rect key="frame" x="20" y="59" width="353" height="759"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nk-b5-iry">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="77.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daf-ph-hF6">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="562"/>
+                                        <rect key="frame" x="0.0" y="86.333333333333343" width="353" height="475.66666666666663"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -57,7 +63,7 @@
                                             <action selector="answerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yT8-0i-QgN"/>
                                         </connections>
                                     </button>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hFx-KX-SLR">
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hFx-KX-SLR">
                                         <rect key="frame" x="0.0" y="749" width="353" height="10"/>
                                         <color key="tintColor" red="1" green="0.90233312070000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -84,6 +90,7 @@
                         <outlet property="falseButton" destination="rfn-iU-kKq" id="pJF-dn-Ox8"/>
                         <outlet property="progressBar" destination="hFx-KX-SLR" id="cLN-ic-dUo"/>
                         <outlet property="questionText" destination="daf-ph-hF6" id="CLw-U3-zWh"/>
+                        <outlet property="scoreLabel" destination="9nk-b5-iry" id="6ov-5f-6pr"/>
                         <outlet property="trueButton" destination="LkI-QN-leY" id="WBR-cG-b69"/>
                     </connections>
                 </viewController>
